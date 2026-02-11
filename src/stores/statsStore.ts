@@ -18,7 +18,7 @@ export const statsStore = {
     }
     const stored = localStorage.getItem(STATS_KEY);
     this.cache = stored ? JSON.parse(stored) : {};
-    return this.cache;
+    return this.cache!;
   },
   
   setStats(stats: Record<string, WordStats>) {
